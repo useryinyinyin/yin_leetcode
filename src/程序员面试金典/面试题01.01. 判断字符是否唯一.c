@@ -10,7 +10,7 @@ bool isUnique(char* astr){
     if (strlen(astr) == 0) {
         return true;
     }
-    qsort(astr, strlen(astr) - 1, sizeof(char), cmp);
+    qsort(astr, strlen(astr), sizeof(char), cmp);
 
     for (int i = 0; i < strlen(astr); i++) {
         if (astr[i] == astr[i + 1]) {
