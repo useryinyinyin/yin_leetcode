@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdbool.h>
+
 int cmp(const void *_a, const void *_b)
 {
     char *a = (char *)_a;
@@ -10,6 +13,7 @@ bool isUnique(char* astr){
     if (strlen(astr) == 0) {
         return true;
     }
+
     qsort(astr, strlen(astr), sizeof(char), cmp);
 
     for (int i = 0; i < strlen(astr); i++) {
